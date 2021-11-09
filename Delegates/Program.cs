@@ -19,14 +19,12 @@ namespace Delegates
         {
             Joiner joiner = new Joiner("Good Morning");
 
-            StringOP strOP = PrintUpper;
+            Action<string> strOP = PrintUpper;
 
             strOP += PrintLower;
             strOP += joiner.JoinAndPrint;
 
             strOP.Invoke("Everyone");
-
-
         }
     }
 }
